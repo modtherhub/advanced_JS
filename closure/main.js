@@ -80,3 +80,6 @@ Initially, they are in the “Uninitialized” state. That’s a special interna
 // Key takeaway
 // var → Created + Initialized (undefined) → Accessible
 // let / const → Created + Not Initialized (TDZ) → Not Accessible
+
+// resources 
+// https://javascript.info/closure#lexical-environment

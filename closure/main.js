@@ -38,3 +38,45 @@ Initially, they are in the “Uninitialized” state. That’s a special interna
 2- Then let phrase definition appears. There’s no assignment yet, so its value is undefined. We can use the variable from this point forward.
 3- phrase is assigned a value.
 4- phrase changes the value. */
+
+
+/* scope */
+// function test() {
+//   if (true) {
+//     var x = 10; // var does not recognize Block Scope.
+//     let y = 20; // let block scope 
+//   }
+// test();
+
+//   console.log(x); // 10
+// //   console.log(y); // ReferenceError
+// }
+// | word    | Scope                |
+// |---------|----------------------|
+// | `var`   | Function || Global   |
+// | `let`   | Block                |
+// | `const` | Block                |
+
+// Key Differences Table 
+// Feature             | var                      | let                        | const
+// Scope               | Function / Global        | Block ({})                 | Block ({}) 
+// Can Be Reassigned?  | Yes                      | Yes                        | No
+// Can Be Redeclared?  |  Yes                     | No                         | No
+// Hoisting Behavior   | Initialized as undefined | Hoisted, but uninitialized | Hoisted, but uninitializedRequired 
+// Initial Value?      | No                       |   No                       | Yes
+
+// During the Creation Phase, JavaScript allocates memory for variables.
+// var variables are created and immediately initialized with undefined.
+// undefined is a valid primitive value in JavaScript.
+// Because the variable is already initialized, accessing it before its declaration does not throw an error.
+// Instead, JavaScript returns undefined.
+
+// During the Creation Phase, let and const variables are also created.
+// However, they are not initialized immediately.
+// They remain in the Temporal Dead Zone (TDZ) until execution reaches their declaration.
+// Accessing them before initialization throws a ReferenceError.
+// The error occurs not because the variable doesn't exist, but because it exists and is not yet initialized.
+
+// Key takeaway
+// var → Created + Initialized (undefined) → Accessible
+// let / const → Created + Not Initialized (TDZ) → Not Accessible

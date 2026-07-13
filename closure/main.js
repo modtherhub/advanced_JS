@@ -81,5 +81,34 @@ Initially, they are in the “Uninitialized” state. That’s a special interna
 // var → Created + Initialized (undefined) → Accessible
 // let / const → Created + Not Initialized (TDZ) → Not Accessible
 
+
+/* inner
+   │
+   ▼
+outer   ← Outer
+   │
+   ▼
+Global  ← Outer of outer
+   │
+   ▼
+null */
+// If a variable is not found anywhere, that’s an error in strict mode (without use strict, an assignment to a non-existing variable creates a new global variable, for compatibility with old code).
+
+function makeCounter() {
+  let count = 0;
+
+  return function() {
+    return count++;
+  };
+}
+
+let counter = makeCounter();
+console.log(counter())
+console.log(counter())
+console.log(counter())
+console.log(counter())
+console.log(counter())
+console.log(counter())
+
 // resources 
 // https://javascript.info/closure#lexical-environment

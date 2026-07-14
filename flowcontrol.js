@@ -15,3 +15,23 @@ var ara = ['a', 'v', 'c']
 for (var i in ara) {
     console.log(i + " " + ara[i]);
 } */
+
+
+// The directory object has just one property, named musicians, which is an array. Each
+// element in the directory.musicians array is an object, with firstname and lastname
+// 3.11 JavaScript Object Notation (JSON) 79
+// properties. Using a for loop we can go over the musicians array, printing the full name of
+// each musician
+// var directory = {
+//     musicians: [
+//         { firstname: "Chuck", lastname: "Berry" },
+//         { firstname: "Ray", lastname: "Charles" },
+//         { firstname: "Buddy", lastname: "Holly" }
+//     ]
+// };
+
+// var ararr = directory.musicians
+
+// for (var i in ararr) {
+//     console.log(ararr[i].firstname + " " + ararr[i].lastname)
+// }

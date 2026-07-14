@@ -95,11 +95,11 @@ null */
 // If a variable is not found anywhere, that’s an error in strict mode (without use strict, an assignment to a non-existing variable creates a new global variable, for compatibility with old code).
 
 function makeCounter() {
-  let count = 0;
+   let count = 0;
 
-  return function() {
-    return count++;
-  };
+   return function () {
+      return count++;
+   };
 }
 
 let counter = makeCounter();
@@ -110,5 +110,17 @@ console.log(counter())
 console.log(counter())
 console.log(counter())
 
+
+
 // resources 
 // https://javascript.info/closure#lexical-environment
+
+/* If you assign a value to a variable that has not been declared, it will automatically be defined
+as a global variable. In the following code example, carName is a global variable even though
+the value is assigned inside a function: */
+
+// Code here can use carName
+function myFunction() {
+   carName = "Suzuki";
+   // Code here can use carName
+}

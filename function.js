@@ -11,3 +11,11 @@ console.log(multi(4,4))
 // Dorman, Michael. Introduction to Web Mapping, CRC Press LLC, 2020. ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/univ-people-ebooks/detail.action?docID=6029016.
 // Created from univ-people-ebooks on 2026-07-13 23:43:27.
 // TRY IT YOURSELF
+
+// Function definition 
+function multiply(a, b) { 
+    return a * b; 
+}
+
+// function call 
+multiply(2*4)
